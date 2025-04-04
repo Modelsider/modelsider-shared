@@ -1,0 +1,21 @@
+{
+    "name": "modelsider-shared",
+    "version": "1.0.0",
+    "description": "Shared types for modelsider client and backend",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "build": "tsc"
+    },
+    "devDependencies": {
+      "typescript": "^5.3.3",
+      "zod": "^3.22.4"
+    },
+    "dependencies": {
+      "zod": "^3.22.4"
+    }
+  }
+  
