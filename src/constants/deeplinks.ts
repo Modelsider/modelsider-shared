@@ -1,1 +1,3 @@
-export const DEEPLINKS = {};
+export const DEEPLINKS = {
+  test: "test",
+};
