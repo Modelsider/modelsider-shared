@@ -1,0 +1,45 @@
+import { z } from "zod";
+export declare const CommentSchema: z.ZodObject<{
+    id: z.ZodNumber;
+    text: z.ZodString;
+    user_id: z.ZodString;
+    agency_id: z.ZodNumber;
+    agency_name: z.ZodString;
+    agency_type: z.ZodString;
+    type: z.ZodLiteral<"Comment">;
+    types: z.ZodArray<z.ZodString, "many">;
+    is_anonymous: z.ZodBoolean;
+    created_at: z.ZodOptional<z.ZodUnion<[z.ZodString, z.ZodDate]>>;
+    likes_count: z.ZodOptional<z.ZodNumber>;
+    replies_count: z.ZodOptional<z.ZodNumber>;
+    attachments: z.ZodOptional<z.ZodArray<z.ZodAny, "many">>;
+}, "strip", z.ZodTypeAny, {
+    type: "Comment";
+    id: number;
+    text: string;
+    types: string[];
+    user_id: string;
+    agency_id: number;
+    agency_name: string;
+    agency_type: string;
+    is_anonymous: boolean;
+    created_at?: string | Date | undefined;
+    likes_count?: number | undefined;
+    replies_count?: number | undefined;
+    attachments?: any[] | undefined;
+}, {
+    type: "Comment";
+    id: number;
+    text: string;
+    types: string[];
+    user_id: string;
+    agency_id: number;
+    agency_name: string;
+    agency_type: string;
+    is_anonymous: boolean;
+    created_at?: string | Date | undefined;
+    likes_count?: number | undefined;
+    replies_count?: number | undefined;
+    attachments?: any[] | undefined;
+}>;
+export type Comment = z.infer<typeof CommentSchema>;
