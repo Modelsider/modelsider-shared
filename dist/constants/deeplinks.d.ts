@@ -1,1 +1,3 @@
-export declare const DEEPLINKS: {};
+export declare const DEEPLINKS: {
+    test: string;
+};
