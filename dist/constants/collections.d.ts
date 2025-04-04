@@ -1,0 +1,22 @@
+export declare const COLLECTIONS: {
+    Users: string;
+    Agencies: string;
+    SuggestedAgencies: string;
+    WhoRatedAgencies: string;
+    AgenciesRatingInfo: string;
+    News: string;
+    Bookmarks: string;
+    Comments: string;
+    CommentsLikes: string;
+    Replies: string;
+    ReportComments: string;
+    EarlyAccess: string;
+    NewsCounter: string;
+    DeviceTokens: string;
+    Countries: string;
+    Lists: string;
+    Posts: string;
+    Contracts: string;
+    Jobs: string;
+    Notifications: string;
+};
