@@ -4,7 +4,8 @@ export declare const NotificationSchema: z.ZodObject<{
     body: z.ZodString;
     title: z.ZodString;
     deeplink: z.ZodOptional<z.ZodString>;
-    timestamp: z.ZodUnion<[z.ZodString, z.ZodDate]>;
+    timestamp: z.ZodAny;
+    comment: z.ZodOptional<z.ZodString>;
     user_from_id: z.ZodString;
     user_to_id: z.ZodString;
     type: z.ZodEnum<["like", "reply"]>;
@@ -12,18 +13,20 @@ export declare const NotificationSchema: z.ZodObject<{
     type: "like" | "reply";
     body: string;
     title: string;
-    timestamp: string | Date;
     user_from_id: string;
     user_to_id: string;
     deeplink?: string | undefined;
+    timestamp?: any;
+    comment?: string | undefined;
 }, {
     type: "like" | "reply";
     body: string;
     title: string;
-    timestamp: string | Date;
     user_from_id: string;
     user_to_id: string;
     deeplink?: string | undefined;
+    timestamp?: any;
+    comment?: string | undefined;
 }>;
 export declare const SaveDeviceTokenInputSchema: z.ZodObject<{
     userId: z.ZodString;
@@ -66,7 +69,8 @@ export declare const GetNotificationsOutputSchema: z.ZodObject<z.objectUtil.exte
     body: z.ZodString;
     title: z.ZodString;
     deeplink: z.ZodOptional<z.ZodString>;
-    timestamp: z.ZodUnion<[z.ZodString, z.ZodDate]>;
+    timestamp: z.ZodAny;
+    comment: z.ZodOptional<z.ZodString>;
     user_from_id: z.ZodString;
     user_to_id: z.ZodString;
     type: z.ZodEnum<["like", "reply"]>;
@@ -93,10 +97,11 @@ export declare const GetNotificationsOutputSchema: z.ZodObject<z.objectUtil.exte
         name?: string | undefined;
         avatar?: string | undefined;
     } | null;
-    timestamp: string | Date;
     user_from_id: string;
     user_to_id: string;
     deeplink?: string | undefined;
+    timestamp?: any;
+    comment?: string | undefined;
 }, {
     type: "like" | "reply";
     body: string;
@@ -106,10 +111,11 @@ export declare const GetNotificationsOutputSchema: z.ZodObject<z.objectUtil.exte
         name?: string | undefined;
         avatar?: string | undefined;
     } | null;
-    timestamp: string | Date;
     user_from_id: string;
     user_to_id: string;
     deeplink?: string | undefined;
+    timestamp?: any;
+    comment?: string | undefined;
 }>;
 export declare const MarkAllNotificationsAsReadInputSchema: z.ZodObject<{
     userId: z.ZodString;
