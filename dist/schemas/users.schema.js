@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetUsersByIdsInputSchema = exports.UserInfoSchema = exports.UserStatusTypeEnum = void 0;
+exports.GetUsersByIdsOutputSchema = exports.GetUserOutputSchema = exports.DefaultSuccessResponseSchema = exports.UpdateUserInputSchema = exports.GetUserInputSchema = exports.DeleteUserInputSchema = exports.CreateUserInputSchema = exports.GetUsersByIdsInputSchema = exports.UserInfoSchema = exports.UserStatusTypeEnum = void 0;
 const zod_1 = require("zod");
 exports.UserStatusTypeEnum = zod_1.z.enum([
     "waiting",
@@ -37,3 +37,22 @@ exports.UserInfoSchema = zod_1.z.object({
 exports.GetUsersByIdsInputSchema = zod_1.z.object({
     usersIds: zod_1.z.array(zod_1.z.string()),
 });
+exports.CreateUserInputSchema = zod_1.z.object({
+    userInfo: exports.UserInfoSchema,
+});
+exports.DeleteUserInputSchema = zod_1.z.object({
+    docId: zod_1.z.string(),
+    uid: zod_1.z.string(),
+});
+exports.GetUserInputSchema = zod_1.z.object({
+    id: zod_1.z.string(),
+});
+exports.UpdateUserInputSchema = zod_1.z.object({
+    docId: zod_1.z.string(),
+    data: zod_1.z.record(zod_1.z.any()),
+});
+exports.DefaultSuccessResponseSchema = zod_1.z.object({
+    success: zod_1.z.literal(true),
+});
+exports.GetUserOutputSchema = exports.UserInfoSchema.nullable();
+exports.GetUsersByIdsOutputSchema = zod_1.z.array(exports.UserInfoSchema);
