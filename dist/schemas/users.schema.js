@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetUsersByIdsOutputSchema = exports.GetUserOutputSchema = exports.DefaultSuccessResponseSchema = exports.UpdateUserInputSchema = exports.GetUserInputSchema = exports.DeleteUserInputSchema = exports.CreateUserInputSchema = exports.GetUsersByIdsInputSchema = exports.UserInfoSchema = exports.UserStatusTypeEnum = void 0;
+exports.GetUsersByAgencyIdOutputSchema = exports.GetUsersByAgencyIdInputSchema = exports.GetUsersByIdsOutputSchema = exports.GetUserOutputSchema = exports.DefaultSuccessResponseSchema = exports.UpdateUserInputSchema = exports.GetUserInputSchema = exports.DeleteUserInputSchema = exports.CreateUserInputSchema = exports.GetUsersByIdsInputSchema = exports.UserInfoSchema = exports.UserStatusTypeEnum = void 0;
 const zod_1 = require("zod");
+const agency_schema_1 = require("./agency.schema");
 exports.UserStatusTypeEnum = zod_1.z.enum([
     "waiting",
     "approved",
@@ -56,3 +57,10 @@ exports.DefaultSuccessResponseSchema = zod_1.z.object({
 });
 exports.GetUserOutputSchema = exports.UserInfoSchema.nullable();
 exports.GetUsersByIdsOutputSchema = zod_1.z.array(exports.UserInfoSchema);
+exports.GetUsersByAgencyIdInputSchema = zod_1.z.object({
+    agencyId: zod_1.z.number(),
+    type: agency_schema_1.AgencyTypeEnum,
+});
+exports.GetUsersByAgencyIdOutputSchema = zod_1.z.array(exports.UserInfoSchema.extend({
+    createdAt: zod_1.z.any().nullable(),
+}));
