@@ -224,14 +224,11 @@ export declare const CreateUserInputSchema: z.ZodObject<{
     };
 }>;
 export declare const DeleteUserInputSchema: z.ZodObject<{
-    docId: z.ZodString;
-    uid: z.ZodString;
+    id: z.ZodString;
 }, "strip", z.ZodTypeAny, {
-    docId: string;
-    uid: string;
+    id: string;
 }, {
-    docId: string;
-    uid: string;
+    id: string;
 }>;
 export declare const GetUserInputSchema: z.ZodObject<{
     id: z.ZodString;

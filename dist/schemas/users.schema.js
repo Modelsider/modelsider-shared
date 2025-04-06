@@ -41,8 +41,7 @@ exports.CreateUserInputSchema = zod_1.z.object({
     userInfo: exports.UserInfoSchema,
 });
 exports.DeleteUserInputSchema = zod_1.z.object({
-    docId: zod_1.z.string(),
-    uid: zod_1.z.string(),
+    id: zod_1.z.string(),
 });
 exports.GetUserInputSchema = zod_1.z.object({
     id: zod_1.z.string(),
