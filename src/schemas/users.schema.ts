@@ -76,6 +76,10 @@ export const GetUsersByAgencyIdOutputSchema = z.array(
   })
 );
 
+export const GetAllUsersInputSchema = z.void();
+
+export const GetAllUsersOutputSchema = z.array(UserInfoSchema);
+
 export type GetUsersByAgencyIdInput = z.infer<
   typeof GetUsersByAgencyIdInputSchema
 >;
@@ -94,3 +98,5 @@ export type DefaultSuccessResponse = z.infer<
 >;
 export type GetUserOutput = z.infer<typeof GetUserOutputSchema>;
 export type GetUsersByIdsOutput = z.infer<typeof GetUsersByIdsOutputSchema>;
+export type GetAllUsersInput = z.infer<typeof GetAllUsersInputSchema>;
+export type GetAllUsersOutput = z.infer<typeof GetAllUsersOutputSchema>;
