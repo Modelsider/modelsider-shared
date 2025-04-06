@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetUsersByAgencyIdOutputSchema = exports.GetUsersByAgencyIdInputSchema = exports.GetUsersByIdsOutputSchema = exports.GetUserOutputSchema = exports.DefaultSuccessResponseSchema = exports.UpdateUserInputSchema = exports.GetUserInputSchema = exports.DeleteUserInputSchema = exports.CreateUserInputSchema = exports.GetUsersByIdsInputSchema = exports.UserInfoSchema = exports.UserStatusTypeEnum = void 0;
+exports.GetAllUsersOutputSchema = exports.GetAllUsersInputSchema = exports.GetUsersByAgencyIdOutputSchema = exports.GetUsersByAgencyIdInputSchema = exports.GetUsersByIdsOutputSchema = exports.GetUserOutputSchema = exports.DefaultSuccessResponseSchema = exports.UpdateUserInputSchema = exports.GetUserInputSchema = exports.DeleteUserInputSchema = exports.CreateUserInputSchema = exports.GetUsersByIdsInputSchema = exports.UserInfoSchema = exports.UserStatusTypeEnum = void 0;
 const zod_1 = require("zod");
 const agency_schema_1 = require("./agency.schema");
 exports.UserStatusTypeEnum = zod_1.z.enum([
@@ -64,3 +64,5 @@ exports.GetUsersByAgencyIdInputSchema = zod_1.z.object({
 exports.GetUsersByAgencyIdOutputSchema = zod_1.z.array(exports.UserInfoSchema.extend({
     createdAt: zod_1.z.any().nullable(),
 }));
+exports.GetAllUsersInputSchema = zod_1.z.void();
+exports.GetAllUsersOutputSchema = zod_1.z.array(exports.UserInfoSchema);
