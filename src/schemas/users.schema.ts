@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { AgencyTypeEnum } from "./agency.schema";
 
 export const UserStatusTypeEnum = z.enum([
   "waiting",
@@ -64,6 +65,23 @@ export const GetUserOutputSchema = UserInfoSchema.nullable();
 
 export const GetUsersByIdsOutputSchema = z.array(UserInfoSchema);
 
+export const GetUsersByAgencyIdInputSchema = z.object({
+  agencyId: z.number(),
+  type: AgencyTypeEnum,
+});
+
+export const GetUsersByAgencyIdOutputSchema = z.array(
+  UserInfoSchema.extend({
+    createdAt: z.any().nullable(),
+  })
+);
+
+export type GetUsersByAgencyIdInput = z.infer<
+  typeof GetUsersByAgencyIdInputSchema
+>;
+export type GetUsersByAgencyIdOutput = z.infer<
+  typeof GetUsersByAgencyIdOutputSchema
+>;
 export type IUserInfo = z.infer<typeof UserInfoSchema>;
 export type GetUsersByIdsInput = z.infer<typeof GetUsersByIdsInputSchema>;
 export type UserStatusType = z.infer<typeof UserStatusTypeEnum>;
