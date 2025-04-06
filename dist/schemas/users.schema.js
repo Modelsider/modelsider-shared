@@ -26,7 +26,6 @@ exports.UserInfoSchema = zod_1.z.object({
         replies: zod_1.z.boolean(),
         news: zod_1.z.boolean(),
     }),
-    docId: zod_1.z.string(),
     is_anonymous: zod_1.z.boolean().optional(),
     created_at: zod_1.z.any().optional(),
     is_first_time_login: zod_1.z.boolean().nullable(),

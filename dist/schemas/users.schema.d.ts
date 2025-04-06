@@ -28,7 +28,6 @@ export declare const UserInfoSchema: z.ZodObject<{
         bookmarksComments: boolean;
         likes: boolean;
     }>;
-    docId: z.ZodString;
     is_anonymous: z.ZodOptional<z.ZodBoolean>;
     created_at: z.ZodOptional<z.ZodAny>;
     is_first_time_login: z.ZodNullable<z.ZodBoolean>;
@@ -54,7 +53,6 @@ export declare const UserInfoSchema: z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -78,7 +76,6 @@ export declare const UserInfoSchema: z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -121,7 +118,6 @@ export declare const CreateUserInputSchema: z.ZodObject<{
             bookmarksComments: boolean;
             likes: boolean;
         }>;
-        docId: z.ZodString;
         is_anonymous: z.ZodOptional<z.ZodBoolean>;
         created_at: z.ZodOptional<z.ZodAny>;
         is_first_time_login: z.ZodNullable<z.ZodBoolean>;
@@ -147,7 +143,6 @@ export declare const CreateUserInputSchema: z.ZodObject<{
         dateOfBirth: string;
         userName: string;
         profilePictureUrl: string;
-        docId: string;
         is_first_time_login: boolean | null;
         gender: string;
         is_anonymous?: boolean | undefined;
@@ -171,7 +166,6 @@ export declare const CreateUserInputSchema: z.ZodObject<{
         dateOfBirth: string;
         userName: string;
         profilePictureUrl: string;
-        docId: string;
         is_first_time_login: boolean | null;
         gender: string;
         is_anonymous?: boolean | undefined;
@@ -197,7 +191,6 @@ export declare const CreateUserInputSchema: z.ZodObject<{
         dateOfBirth: string;
         userName: string;
         profilePictureUrl: string;
-        docId: string;
         is_first_time_login: boolean | null;
         gender: string;
         is_anonymous?: boolean | undefined;
@@ -223,7 +216,6 @@ export declare const CreateUserInputSchema: z.ZodObject<{
         dateOfBirth: string;
         userName: string;
         profilePictureUrl: string;
-        docId: string;
         is_first_time_login: boolean | null;
         gender: string;
         is_anonymous?: boolean | undefined;
@@ -293,7 +285,6 @@ export declare const GetUserOutputSchema: z.ZodNullable<z.ZodObject<{
         bookmarksComments: boolean;
         likes: boolean;
     }>;
-    docId: z.ZodString;
     is_anonymous: z.ZodOptional<z.ZodBoolean>;
     created_at: z.ZodOptional<z.ZodAny>;
     is_first_time_login: z.ZodNullable<z.ZodBoolean>;
@@ -319,7 +310,6 @@ export declare const GetUserOutputSchema: z.ZodNullable<z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -343,7 +333,6 @@ export declare const GetUserOutputSchema: z.ZodNullable<z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -378,7 +367,6 @@ export declare const GetUsersByIdsOutputSchema: z.ZodArray<z.ZodObject<{
         bookmarksComments: boolean;
         likes: boolean;
     }>;
-    docId: z.ZodString;
     is_anonymous: z.ZodOptional<z.ZodBoolean>;
     created_at: z.ZodOptional<z.ZodAny>;
     is_first_time_login: z.ZodNullable<z.ZodBoolean>;
@@ -404,7 +392,6 @@ export declare const GetUsersByIdsOutputSchema: z.ZodArray<z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -428,7 +415,6 @@ export declare const GetUsersByIdsOutputSchema: z.ZodArray<z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -473,7 +459,6 @@ export declare const GetUsersByAgencyIdOutputSchema: z.ZodArray<z.ZodObject<z.ob
         bookmarksComments: boolean;
         likes: boolean;
     }>;
-    docId: z.ZodString;
     is_anonymous: z.ZodOptional<z.ZodBoolean>;
     created_at: z.ZodOptional<z.ZodAny>;
     is_first_time_login: z.ZodNullable<z.ZodBoolean>;
@@ -501,7 +486,6 @@ export declare const GetUsersByAgencyIdOutputSchema: z.ZodArray<z.ZodObject<z.ob
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -526,7 +510,6 @@ export declare const GetUsersByAgencyIdOutputSchema: z.ZodArray<z.ZodObject<z.ob
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -563,7 +546,6 @@ export declare const GetAllUsersOutputSchema: z.ZodArray<z.ZodObject<{
         bookmarksComments: boolean;
         likes: boolean;
     }>;
-    docId: z.ZodString;
     is_anonymous: z.ZodOptional<z.ZodBoolean>;
     created_at: z.ZodOptional<z.ZodAny>;
     is_first_time_login: z.ZodNullable<z.ZodBoolean>;
@@ -589,7 +571,6 @@ export declare const GetAllUsersOutputSchema: z.ZodArray<z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
@@ -613,7 +594,6 @@ export declare const GetAllUsersOutputSchema: z.ZodArray<z.ZodObject<{
     dateOfBirth: string;
     userName: string;
     profilePictureUrl: string;
-    docId: string;
     is_first_time_login: boolean | null;
     gender: string;
     is_anonymous?: boolean | undefined;
