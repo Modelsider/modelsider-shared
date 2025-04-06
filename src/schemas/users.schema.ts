@@ -25,7 +25,6 @@ export const UserInfoSchema = z.object({
     replies: z.boolean(),
     news: z.boolean(),
   }),
-  docId: z.string(),
   is_anonymous: z.boolean().optional(),
   created_at: z.any().optional(),
   is_first_time_login: z.boolean().nullable(),
