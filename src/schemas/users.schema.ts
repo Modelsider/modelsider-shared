@@ -43,8 +43,7 @@ export const CreateUserInputSchema = z.object({
 });
 
 export const DeleteUserInputSchema = z.object({
-  docId: z.string(),
-  uid: z.string(),
+  id: z.string(),
 });
 
 export const GetUserInputSchema = z.object({
